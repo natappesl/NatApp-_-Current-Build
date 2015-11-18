@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+
+    <script src="cordova.js"></script>
+    <script src="kendo/js/jquery.min.js"></script>
+    <script src="kendo/js/kendo.mobile.min.js"></script>
+    <script src="app.js"></script>
+    <script src="bower_components/everlive/min/everlive.all.min.js"></script>
+    <script src="dataProviders/defaultProvider.js"></script>
+</head>
+
+<body id="kendoUiMobileApp">
+    <script src="components/aboutView/index.js"></script>
+    <script src="components/area/index.js"></script>
+    <script src="components/animals/index.js"></script>
+    <script src="components/plants/index.js"></script>
+    <script src="components/homeView/index.js"></script>
+    <div data-role="layout" data-id="main">
+        <header data-role="header">
+            <div data-role="navbar">
+                <a data-role="backbutton" data-align="left">Back</a>
+                <span data-role="view-title"></span>
+                <a data-align="right" data-role="button" class="nav-button" href="#/">Index</a>
+            </div>
+        </header>
+
+        <!-- application views will be rendered here -->
+
+        <footer data-role="footer">
+        </footer>
+    </div>
+
+    <div data-role="layout" data-id="main-nonav">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+            </div>
+        </header>
+
+        <!-- application views will be rendered here -->
+
+        <footer data-role="footer">
+        </footer>
+    </div>
+
+    <div data-role="view" data-layout="main" data-title="Index">
+        <ul id="navigation-container" data-role="listview" data-style="inset">
+            <li><a href="components/homeView/view.html" data-icon="home">Home View</a></li>
+            <li><a href="components/plants/view.html" data-icon="organize">Plants</a></li>
+            <li><a href="components/animals/view.html" data-icon="organize">Animals</a></li>
+            <li><a href="components/area/view.html" data-icon="home">Area</a></li>
+            <li><a href="components/aboutView/view.html" data-icon="info">About the Team</a></li>
+        </ul>
+    </div>
+    <!-- START_CUSTOM_CODE_kendoUiMobileApp -->
+    <!-- END_CUSTOM_CODE_kendoUiMobileApp -->
+</body>
+
+</html>

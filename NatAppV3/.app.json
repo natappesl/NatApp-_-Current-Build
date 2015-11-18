@@ -1,15 +1,111 @@
 {
   "type": "kendo-ui-mobile",
-  "isNew": true,
+  "views": [
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "homeView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:list",
+          "name": "homeViewModel",
+          "dataProvider": "defaultProvider",
+          "collection": "Activities",
+          "iconField": false,
+          "headerField": "Text",
+          "masterDetails": false,
+          "pullToRefresh": false,
+          "endlessScroll": false
+        }
+      ],
+      "title": "Home View",
+      "addToNavigation": true,
+      "icon": "home"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "plants",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:list",
+          "name": "plantsModel",
+          "dataProvider": "defaultProvider",
+          "collection": "Activities",
+          "headerField": "Text",
+          "masterDetails": false,
+          "pullToRefresh": false,
+          "endlessScroll": false
+        }
+      ],
+      "title": "Plants",
+      "addToNavigation": true,
+      "icon": "organize"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "animals",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:list",
+          "name": "animalsModel",
+          "dataProvider": "defaultProvider",
+          "collection": "Activities",
+          "headerField": "Text",
+          "masterDetails": false,
+          "pullToRefresh": false,
+          "endlessScroll": false
+        }
+      ],
+      "title": "Animals",
+      "addToNavigation": true,
+      "icon": "organize"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "area",
+      "components": [],
+      "title": "Area",
+      "addToNavigation": true,
+      "icon": "home"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "aboutView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:about",
+          "name": "aboutViewModel",
+          "appName": "My App",
+          "appVersion": "Version 1",
+          "appDescription": "App description",
+          "contactButton": true,
+          "contactLabel": "Contact us",
+          "contactMail": "support@example.com",
+          "facebookButton": true,
+          "facebookLabel": "Like us on Facebook",
+          "facebookLink": "https://www.facebook.com/Telerik",
+          "twitterButton": true,
+          "twitterLabel": "Follow us on Twitter",
+          "twitterLink": "https://twitter.com/telerik"
+        }
+      ],
+      "title": "About the Team",
+      "addToNavigation": true,
+      "icon": "info"
+    }
+  ],
   "dataProviders": [
     {
       "type": "kendo-ui-mobile:dataProvider",
-      "title": "DefaultProvider",
       "name": "defaultProvider",
+      "everliveUrl": "//platform.telerik.com/bs-api/v1/",
+      "title": "DefaultProvider",
       "source": "everlive",
-      "offlineStorage": true,
       "everliveKey": "0FTiNy5k9nnUn2tX",
-      "everliveUrl": ""
+      "offlineStorage": true
     }
-  ]
+  ],
+  "name": "kendoUiMobileApp",
+  "navigation": "listmenu",
+  "transition": "none",
+  "skin": "flat"
 }
