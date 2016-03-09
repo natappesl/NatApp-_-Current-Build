@@ -58,7 +58,13 @@ app.animals = kendo.observable({
             dataSource: dataSource
         });
 
-    parent.set('animalsModel', animalsModel);
+    if (typeof dataProvider.sbProviderReady === 'function') {
+        dataProvider.sbProviderReady(function dl_sbProviderReady() {
+            parent.set('animalsModel', animalsModel);
+        });
+    } else {
+        parent.set('animalsModel', animalsModel);
+    }
 })(app.animals);
 
 // START_CUSTOM_CODE_animalsModel

@@ -58,7 +58,13 @@ app.plants = kendo.observable({
             dataSource: dataSource
         });
 
-    parent.set('plantsModel', plantsModel);
+    if (typeof dataProvider.sbProviderReady === 'function') {
+        dataProvider.sbProviderReady(function dl_sbProviderReady() {
+            parent.set('plantsModel', plantsModel);
+        });
+    } else {
+        parent.set('plantsModel', plantsModel);
+    }
 })(app.plants);
 
 // START_CUSTOM_CODE_plantsModel

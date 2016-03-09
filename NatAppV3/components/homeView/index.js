@@ -58,7 +58,13 @@ app.homeView = kendo.observable({
             dataSource: dataSource
         });
 
-    parent.set('homeViewModel', homeViewModel);
+    if (typeof dataProvider.sbProviderReady === 'function') {
+        dataProvider.sbProviderReady(function dl_sbProviderReady() {
+            parent.set('homeViewModel', homeViewModel);
+        });
+    } else {
+        parent.set('homeViewModel', homeViewModel);
+    }
 })(app.homeView);
 
 // START_CUSTOM_CODE_homeViewModel
