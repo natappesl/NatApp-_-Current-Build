@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Plant Menu</title>
+</head>
+
+<body>
+    <div data-role="view" data-layout="plant-nonav" data-title="Plant Menu">
+        <ul id="navigation-container" data-role="listview" data-style="inset">
+        </ul>
+    </div>
+    <div data-role="view" data-title="Plants" data-layout="main" data-model="app.plants" data-show="app.plants.onShow" data-after-show="app.plants.afterShow">
+        <ul data-role="listview" data-auto-bind="false" data-style="inset" data-template="plantsModelTemplate" data-bind="{ source: plantsModel.dataSource, events: {click: plantsModel.itemClick} }" data-pull-to-refresh="false" data-endless-scroll="false">
+        </ul>
+        <script type="text/x-kendo-template" id="plantsModelTemplate">
+            <div class="image-with-text">
+                <h3>#: data['Text'] #</h3>
+            </div>
+        </script>
+    </div>
+</body>
+
+</html>

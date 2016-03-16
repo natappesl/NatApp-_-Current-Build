@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Animal Menu</title>
+</head>
+
+<body>
+    <div data-role="view" data-layout="animal-nonav" data-title="Animal Menu">
+        <ul id="navigation-container" data-role="listview" data-style="inset">
+            <li><a href="components/database/animals/birds/viewBirds.html" data-icon="organize">Birds</a>
+            </li>
+            <li><a href="components/database/animals/insects/viewInsects.html" data-icon="organize">Insects</a>
+            </li>
+            <li><a href="components/database/animals/mammals/viewMammals.html" data-icon="organize">Mammals</a>
+            </li>
+        </ul>
+    </div>
+    <div data-role="view" data-title="Animals" data-layout="main" data-model="app.animals" data-show="app.animals.onShow" data-after-show="app.animals.afterShow">
+        <ul data-role="listview" data-auto-bind="false" data-style="inset" data-template="animalsModelTemplate" data-bind="{ source: animalsModel.dataSource, events: {click: animalsModel.itemClick} }" data-pull-to-refresh="false" data-endless-scroll="false">
+        </ul>
+        <script type="text/x-kendo-template" id="animalsModelTemplate">
+            <div class="image-with-text">
+                <h3>#: data['Text'] #</h3>
+            </div>
+        </script>
+    </div>
+</body>
+
+</html>

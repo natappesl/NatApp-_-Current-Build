@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About</title>
+</head>
+
+<body>
+    <div data-role="view" data-title="About the Team" data-layout="main" data-model="app.aboutView" data-show="app.aboutView.onShow" data-after-show="app.aboutView.afterShow">
+        <div class="about-view" data-bind="invisible:error">
+            <div class="icon-group">
+                <div class="app-details">
+                    <h2>NatApp</h2>
+                    <h4>Pre-alpha V0.1</h4>
+                </div>
+            </div>
+            <p>This app is made by UC Merced's NatApp team for the Vernal Pools Reserve.</p>
+            <div class="button-group button-group-vertical">
+                <a data-role="button" data-rel="external" href="mailto:support@example.com">Contact us</a>
+                <a data-role="button" data-rel="external" href="#" onclick="app.aboutView.aboutViewModel.openLink('https://www.facebook.com/Telerik');">Like us on Facebook</a>
+                <a data-role="button" data-rel="external" href="#" onclick="app.aboutView.aboutViewModel.openLink('https://twitter.com/telerik');">Follow us on Twitter</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

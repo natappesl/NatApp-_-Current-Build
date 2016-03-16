@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Plant Menu</title>
+</head>
+
+<body>
+    <div data-role="view" data-title="Home View" data-layout="main" data-model="app.homeView" data-show="app.homeView.onShow" data-after-show="app.homeView.afterShow">
+        <ul data-role="listview" data-auto-bind="false" data-style="inset" data-template="homeViewModelTemplate" data-bind="{ source: homeViewModel.dataSource, events: {click: homeViewModel.itemClick} }" data-pull-to-refresh="false" data-endless-scroll="false">
+        </ul>
+        <script type="text/x-kendo-template" id="homeViewModelTemplate">
+            <div class="image-with-text">
+                <h3>#: data['Text'] #</h3>
+            </div>
+        </script>
+    </div>
+</body>
+
+</html>
