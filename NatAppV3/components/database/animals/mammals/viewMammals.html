@@ -2,15 +2,17 @@
 <html>
 
 <head>
-    <title>Mammal Menu</title>
+    <title>Mammals Menu</title>
 </head>
 
 <body>
-    <div data-role="view" data-layout="mammal-nonav" data-title="Mammal Menu">
-        <ul id="navigation-container" data-role="listview" data-style="inset">
-            <li><a href="components/database/animals/mammals/mammals/viewCow.htm" data-icon="organize">Cow</a>
-            </li>
-        </ul>
+    <div data-role="view" data-title="Mammals" data-layout="main" data-model="app.aboutView" data-show="app.aboutView.onShow" data-after-show="app.aboutView.afterShow">
+        <div class="about-view" data-bind="invisible:error">
+            <ul id="navigation-container" data-role="listview" data-style="inset">
+                <!--<li><a href="components/database/animals/mammals/cow/viewCow.html" data-icon="organize">Cow</a>
+                </li>-->
+            </ul>
+        </div>
     </div>
 </body>
 
