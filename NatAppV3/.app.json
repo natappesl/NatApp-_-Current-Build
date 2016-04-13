@@ -6,21 +6,15 @@
       "name": "homeView",
       "components": [
         {
-          "type": "kendo-ui-mobile:editableList",
-          "listExtraFields": [],
-          "detailExtraFields": [],
-          "components": [],
+          "type": "kendo-ui-mobile:list",
           "name": "homeViewModel",
           "dataProvider": "defaultProvider",
           "collection": "Activities",
-          "headerField": "Text",
           "iconField": false,
+          "headerField": "Text",
+          "masterDetails": false,
           "pullToRefresh": false,
-          "endlessScroll": false,
-          "deleteItemButton": false,
-          "deleteItemConfirmation": true,
-          "addItemForm": false,
-          "editItemForm": false
+          "endlessScroll": false
         }
       ],
       "title": "Home View",
@@ -32,20 +26,14 @@
       "name": "plants",
       "components": [
         {
-          "type": "kendo-ui-mobile:editableList",
-          "listExtraFields": [],
-          "detailExtraFields": [],
-          "components": [],
+          "type": "kendo-ui-mobile:list",
           "name": "plantsModel",
           "dataProvider": "defaultProvider",
           "collection": "Activities",
           "headerField": "Text",
+          "masterDetails": false,
           "pullToRefresh": false,
-          "endlessScroll": false,
-          "deleteItemButton": false,
-          "deleteItemConfirmation": true,
-          "addItemForm": false,
-          "editItemForm": false
+          "endlessScroll": false
         }
       ],
       "title": "Plants",
@@ -57,20 +45,14 @@
       "name": "animals",
       "components": [
         {
-          "type": "kendo-ui-mobile:editableList",
-          "listExtraFields": [],
-          "detailExtraFields": [],
-          "components": [],
+          "type": "kendo-ui-mobile:list",
           "name": "animalsModel",
           "dataProvider": "defaultProvider",
           "collection": "Activities",
           "headerField": "Text",
+          "masterDetails": false,
           "pullToRefresh": false,
-          "endlessScroll": false,
-          "deleteItemButton": false,
-          "deleteItemConfirmation": true,
-          "addItemForm": false,
-          "editItemForm": false
+          "endlessScroll": false
         }
       ],
       "title": "Animals",
@@ -94,12 +76,16 @@
           "name": "aboutViewModel",
           "appName": "My App",
           "appVersion": "Version 1",
-          "appDescription": "Hello",
+          "appDescription": "App description",
           "contactButton": true,
           "contactLabel": "Contact us",
-          "contactMail": "esl@ucmerced.edu",
-          "facebookButton": false,
-          "twitterButton": false
+          "contactMail": "support@example.com",
+          "facebookButton": true,
+          "facebookLabel": "Like us on Facebook",
+          "facebookLink": "https://www.facebook.com/Telerik",
+          "twitterButton": true,
+          "twitterLabel": "Follow us on Twitter",
+          "twitterLink": "https://twitter.com/telerik"
         }
       ],
       "title": "About the Team",

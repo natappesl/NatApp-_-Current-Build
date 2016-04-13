@@ -2,10 +2,11 @@
 <html>
 
 <head>
-    <title>UC Merced - ESL NatApp</title>
+    <title></title>
     <meta charset="utf-8">
     <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
+
     <script src="cordova.js"></script>
     <script src="kendo/js/jquery.min.js"></script>
     <script src="kendo/js/kendo.mobile.min.js"></script>
@@ -25,55 +26,32 @@
             <div data-role="navbar">
                 <a data-role="backbutton" data-align="left">Back</a>
                 <span data-role="view-title"></span>
-                <a data-align="right" data-role="button" class="nav-button" href="#/">Index</a>
+                <a data-align="right" data-role="button" class="nav-button" href="#/">Menu</a>
             </div>
         </header>
+
         <footer data-role="footer">
         </footer>
     </div>
+
     <div data-role="layout" data-id="main-nonav">
         <header data-role="header">
             <div data-role="navbar">
                 <span data-role="view-title"></span>
             </div>
         </header>
+
         <footer data-role="footer">
         </footer>
     </div>
+
     <div data-role="view" data-layout="main-nonav" data-title="Main Menu">
         <ul id="navigation-container" data-role="listview" data-style="inset">
-            <!--<li id="center"><a href="components/homeView/view.html" data-icon="home">Home View</a></li> -->
-            <li><a href="components/search/viewSearch.html" data-icon="search">Search</a>
-            </li>
-            <li><a href="components/database/viewDatabase.html" data-icon="organize">Database</a>
-            </li>
-            <li><a href="components/aboutView/viewAbout.html" data-icon="info">About the Team</a>
-            </li>
+            <li><a href="components/homeView/viewSearch.html" data-icon="search">Search</a></li>
+            <li><a href="components/database/viewDatabase.html" data-icon="organize">Database</a></li>
+            <li><a href="components/aboutView/viewAbout.html" data-icon="info">About the Team</a></li>
         </ul>
     </div>
-    <div id="map"></div>
-<script>
-    $("#map").kendoMap({
-        layerDefaults: {
-            marker: {
-                tooltip: {
-                    callout: false,
-                    template: "Lon:#= location.lng #, Lat:#= location.lat #"
-                }
-            }
-        },
-        layers: [{
-            type: "marker",
-
-            locationField: "latlng",
-            dataSource: {
-                data: [{
-                    latlng: [0, 0]
-                }]
-            }
-        }]
-    });
-</script>
 </body>
 
 </html>

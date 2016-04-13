@@ -6,19 +6,26 @@
 </head>
 
 <body>
-    <div data-role="view" data-layout="plant-nonav" data-title="Plant Menu">
-        <ul id="navigation-container" data-role="listview" data-style="inset">
-        </ul>
+    <div data-role="view" data-title="Plants" data-layout="main" data-model="app.aboutView" data-show="app.aboutView.onShow" data-after-show="app.aboutView.afterShow">
+        <div class="about-view" data-bind="invisible:error">
+            <ul id="navigation-container" data-role="listview" data-style="inset">
+                <li><a href="components/database/plants/flowers/viewFlowers.html" data-icon="organize">Flowers</a>
+                </li>
+            </ul>
+        </div>
     </div>
+    <!--This was supposed to control the Plant section's layout and navigation, but it doesn't work.
+		I'm leaving it here for reference, but I'm going to use the "aboutView" model instead. ~ Landon
+
     <div data-role="view" data-title="Plants" data-layout="main" data-model="app.plants" data-show="app.plants.onShow" data-after-show="app.plants.afterShow">
         <ul data-role="listview" data-auto-bind="false" data-style="inset" data-template="plantsModelTemplate" data-bind="{ source: plantsModel.dataSource, events: {click: plantsModel.itemClick} }" data-pull-to-refresh="false" data-endless-scroll="false">
         </ul>
         <script type="text/x-kendo-template" id="plantsModelTemplate">
-            <div class="image-with-text">
+           <div class="image-with-text">
                 <h3>#: data['Text'] #</h3>
             </div>
         </script>
-    </div>
+    </div>-->
 </body>
 
 </html>

@@ -6,16 +6,19 @@
 </head>
 
 <body>
-    <div data-role="view" data-layout="animal-nonav" data-title="Animal Menu">
-        <ul id="navigation-container" data-role="listview" data-style="inset">
-            <li><a href="components/database/animals/birds/viewBirds.html" data-icon="organize">Birds</a>
-            </li>
-            <li><a href="components/database/animals/insects/viewInsects.html" data-icon="organize">Insects</a>
-            </li>
-            <li><a href="components/database/animals/mammals/viewMammals.html" data-icon="organize">Mammals</a>
-            </li>
-        </ul>
+    <div data-role="view" data-title="Animals" data-layout="main" data-model="app.aboutView" data-show="app.aboutView.onShow" data-after-show="app.aboutView.afterShow">
+        <div class="about-view" data-bind="invisible:error">
+            <ul id="navigation-container" data-role="listview" data-style="inset">
+                <li><a href="components/database/animals/birds/viewBirds.html" data-icon="organize">Birds</a>
+                </li>
+                <li><a href="components/database/animals/mammals/viewMammals.html" data-icon="organize">Mammals</a>
+                </li>
+            </ul>
+        </div>
     </div>
+    <!--This was supposed to control the Animal section's layout and navigation, but it doesn't work.
+		I'm leaving it here for reference, but I'm going to use the "aboutView" model instead. ~ Landon
+
     <div data-role="view" data-title="Animals" data-layout="main" data-model="app.animals" data-show="app.animals.onShow" data-after-show="app.animals.afterShow">
         <ul data-role="listview" data-auto-bind="false" data-style="inset" data-template="animalsModelTemplate" data-bind="{ source: animalsModel.dataSource, events: {click: animalsModel.itemClick} }" data-pull-to-refresh="false" data-endless-scroll="false">
         </ul>
@@ -24,7 +27,7 @@
                 <h3>#: data['Text'] #</h3>
             </div>
         </script>
-    </div>
+    </div>-->
 </body>
 
 </html>

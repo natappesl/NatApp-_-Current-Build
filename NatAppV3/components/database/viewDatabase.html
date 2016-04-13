@@ -6,15 +6,17 @@
 </head>
 
 <body>
-    <div data-role="view" data-layout="database-nonav" data-title="Database Menu">
-        <ul id="navigation-container" data-role="listview" data-style="inset">
-            <li><a href="components/database/plants/viewPlants.html" data-icon="organize">Plants</a>
-            </li>
-            <li><a href="components/database/animals/viewAnimals.html" data-icon="organize">Animals</a>
-            </li>
-            <li><a href="components/database/area/viewArea.html" data-icon="organize">Area Map</a>
-            </li>
-        </ul>
+    <div data-role="view" data-title="Database" data-layout="main" data-model="app.aboutView" data-show="app.aboutView.onShow" data-after-show="app.aboutView.afterShow">
+        <div class="about-view" data-bind="invisible:error">
+            <ul id="navigation-container" data-role="listview" data-style="inset">
+                <li><a href="components/database/plants/viewPlants.html" data-icon="organize">Plants</a>
+                </li>
+                <li><a href="components/database/animals/viewAnimals.html" data-icon="organize">Animals</a>
+                </li>
+                <li><a href="components/database/area/viewArea.html" data-icon="organize">Area Map</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
 

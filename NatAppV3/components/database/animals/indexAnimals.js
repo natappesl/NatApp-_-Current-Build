@@ -5,31 +5,8 @@ app.animals = kendo.observable({
     afterShow: function() {}
 });
 
-// START_CUSTOM_CODE_animals
-// END_CUSTOM_CODE_animals
 (function(parent) {
     var dataProvider = app.data.defaultProvider,
-        fetchFilteredData = function(paramFilter, searchFilter) {
-            var model = parent.get('animalsModel'),
-                dataSource = model.get('dataSource');
-
-            if (paramFilter) {
-                model.set('paramFilter', paramFilter);
-            } else {
-                model.set('paramFilter', undefined);
-            }
-
-            if (paramFilter && searchFilter) {
-                dataSource.filter({
-                    logic: 'and',
-                    filters: [paramFilter, searchFilter]
-                });
-            } else if (paramFilter || searchFilter) {
-                dataSource.filter(paramFilter || searchFilter);
-            } else {
-                dataSource.filter({});
-            }
-        },
         flattenLocationProperties = function(dataItem) {
             var propName, propValue,
                 isLocation = function(value) {
@@ -54,17 +31,13 @@ app.animals = kendo.observable({
                 typeName: 'Activities',
                 dataProvider: dataProvider
             },
+
             change: function(e) {
                 var data = this.data();
                 for (var i = 0; i < data.length; i++) {
                     var dataItem = data[i];
 
                     flattenLocationProperties(dataItem);
-                }
-            },
-            error: function(e) {
-                if (e.xhr) {
-                    alert(JSON.stringify(e.xhr));
                 }
             },
             schema: {
@@ -77,29 +50,10 @@ app.animals = kendo.observable({
                     }
                 }
             },
-            serverFiltering: true,
         },
         dataSource = new kendo.data.DataSource(dataSourceOptions),
         animalsModel = kendo.observable({
-            dataSource: dataSource,
-            itemClick: function(e) {
-
-                app.mobileApp.navigate('#components/animals/details.html?uid=' + e.dataItem.uid);
-
-            },
-            detailsShow: function(e) {
-                var item = e.view.params.uid,
-                    dataSource = animalsModel.get('dataSource'),
-                    itemModel = dataSource.getByUid(item);
-
-                if (!itemModel.Text) {
-                    itemModel.Text = String.fromCharCode(160);
-                }
-
-                animalsModel.set('currentItem', null);
-                animalsModel.set('currentItem', itemModel);
-            },
-            currentItem: null
+            dataSource: dataSource
         });
 
     if (typeof dataProvider.sbProviderReady === 'function') {
@@ -109,13 +63,4 @@ app.animals = kendo.observable({
     } else {
         parent.set('animalsModel', animalsModel);
     }
-
-    parent.set('onShow', function(e) {
-        var param = e.view.params.filter ? JSON.parse(e.view.params.filter) : null;
-
-        fetchFilteredData(param);
-    });
 })(app.animals);
-
-// START_CUSTOM_CODE_animalsModel
-// END_CUSTOM_CODE_animalsModel
