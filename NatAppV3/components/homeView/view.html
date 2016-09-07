@@ -1,12 +1,22 @@
-<div data-role="view" data-title="Home View" data-layout="main" data-model="app.homeView" data-show="app.homeView.onShow" data-after-show="app.homeView.afterShow">
+<!DOCTYPE html>
+<html>
 
-    <ul data-role="listview" data-style="inset" data-template="homeViewModelTemplate" data-bind="{ source: homeViewModel.dataSource}" data-pull-to-refresh="false" data-endless-scroll="false">
-    </ul>
+<head>
+    <title>Home View</title>
+</head>
 
-    <script type="text/x-kendo-template" id="homeViewModelTemplate">
-        <div class="image-with-text">
-            <h3>#: data['Text'] #</h3>
+<body>
+    <!--Not going to lie: I have NO idea what this is doing, so I'm just going to leave it and hope
+		that everything works out. ~ Landon-->
+    <div data-role="view" data-title="Home View" data-layout="main" data-model="app.homeView" data-show="app.homeView.onShow" data-after-show="app.homeView.afterShow">
+        <ul data-role="listview" data-style="inset" data-template="homeViewModelTemplate" data-bind="{ source: homeViewModel.dataSource}" data-pull-to-refresh="false" data-endless-scroll="false">
+        </ul>
+        <script type="text/x-kendo-template" id="homeViewModelTemplate">
+            <div class="image-with-text">
+                <h3>#: data['Text'] #</h3>
+            </div>
+        </script>
+    </div>
+</body>
 
-        </div>
-    </script>
-</div>
+</html>

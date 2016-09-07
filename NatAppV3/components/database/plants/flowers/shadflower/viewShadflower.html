@@ -8,48 +8,57 @@
 
 <body>
     <div data-role="view" data-title="Flowers" data-layout="main" data-model="app.aboutView" data-show="app.aboutView.onShow" data-after-show="app.aboutView.afterShow">
-        <div class="about-view" data-bind="invisible:error">
-            <article>
-                <h1>Shadflower</h1>
-                <div id="Name">
-                    <p style="font-style: italic">
-                        Draba verna
-                    </p>
-                </div>
-                <div id="Image">
-                    <p> <img src="components/database/plants/flowers/shadflower" width="100%">
-                </div>
-                <div id="Overview">
-                    <h1> Overview </h1>
-                    <p>
-                    </p>
-                </div>
-                <div class="line-separator"></div>
-                <div id="Identification">
-                    <h1> Identification </h1>
-                    <p>
-                    </p>
-                </div>
-                <div class="line-separator"></div>
-                <div id="Habitat">
-                    <h1> Habitat </h1>
-                    <p>
-                    </p>
-                </div>
-                <div class="line-separator"></div>
-                <div id="diet">
-                    <h1> Predators and Beneficials </h1>
-                    <p>
-                    </p>
-                </div>
-                <div class="line-separator"></div>
-                <div id="References">
-                    <h1> References </h1>
-                    <ol>
-                    </ol>
-                </div>
-            </article>
-        </div>
+        <article>
+            <h1>Shadflower</h1>
+            <section id="Name">
+                <p style="font-style: italic">
+                    Draba verna
+                </p>
+            </section>
+            <!--
+                <section id="Image">
+					<p> <img src="components/database/plants/flowers/shadflower" width="100%"> </p>
+                </section>
+				-->
+            <section id="Overview">
+                <h1> Overview </h1>
+                <p>
+                    The bloom period for shadflower is during the months of February-May.
+                </p>
+            </section>
+            <div class="line-separator"></div>
+            <section id="Identification">
+                <h1> Identification </h1>
+                <p>
+                    Shadflower has four white petals with six stamen on each flower. The leaves are fairly simple with teeth at the edge of the leaf blade. The leaves grow only at the base of the plant.
+                </p>
+            </section>
+            <div class="line-separator"></div>
+            <section id="Habitat">
+                <h1> Habitat </h1>
+                <p>
+                    Shadflower prefers anthropogenic habitats, such as meadows and fields. It is not native to North America.
+                </p>
+            </section>
+        <!--<div class="line-separator"></div>
+            <section id="Diet">
+                <h1> Predators and Beneficial Organisms </h1>
+                <p>
+                </p>
+            </section>-->
+            <div class="line-separator"></div>
+            <section id="References">
+                <h1> References </h1>
+                <ol>
+                    <li>
+                        <a data-role="button" data-rel="external" href="https://gobotany.newenglandwild.org/species/draba/verna/">https://gobotany.newenglandwild.org</a>
+                    </li>
+                    <li>
+                        <a data-role="button" data-rel="external" href="https://www.calflora.org/cgi-bin/species_query.cgi?where-taxon=Draba+verna">https://www.calflora.org</a>
+                    </li>
+                </ol>
+            </section>
+        </article>
     </div>
 </body>
 

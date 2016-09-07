@@ -1,5 +1,1 @@
-{
-  "CorePlugins": [
-    "org.apache.cordova.network-information"
-  ]
-}
+{}

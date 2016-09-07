@@ -6,8 +6,12 @@
 </head>
 
 <body>
-    <div data-role="view" data-title="Area" data-layout="main" data-model="app.area" data-show="app.area.onShow" data-after-show="app.area.afterShow">
-
+    <div data-role="view" data-title="About the Team" data-layout="main" data-model="app.aboutView" data-show="app.aboutView.onShow" data-after-show="app.aboutView.afterShow">
+        <div class="about-view" data-bind="invisible:error">
+            <p style="text-align: center">
+               The area map isn't working yet! Please wait warmly for it to be added.
+            </p>
+        </div>
     </div>
 </body>
 

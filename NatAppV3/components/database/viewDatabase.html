@@ -6,17 +6,20 @@
 </head>
 
 <body>
+    <!--We're using the aboutView data-model because it works properly. 
+	It controls the navigation bar on the top of the screen. ~ Landon-->
     <div data-role="view" data-title="Database" data-layout="main" data-model="app.aboutView" data-show="app.aboutView.onShow" data-after-show="app.aboutView.afterShow">
-        <div class="about-view" data-bind="invisible:error">
-            <ul id="navigation-container" data-role="listview" data-style="inset">
-                <li><a href="components/database/plants/viewPlants.html" data-icon="organize">Plants</a>
-                </li>
-                <li><a href="components/database/animals/viewAnimals.html" data-icon="organize">Animals</a>
-                </li>
-                <li><a href="components/database/area/viewArea.html" data-icon="organize">Area Map</a>
-                </li>
-            </ul>
-        </div>
+        <ul id="navigation-container" data-role="listview" data-style="inset">
+            <li>
+                <a href="components/database/plants/viewPlants.html" data-icon="organize">Plants</a>
+            </li>
+            <li>
+                <a href="components/database/animals/viewAnimals.html" data-icon="organize">Animals</a>
+            </li>
+            <li>
+                <a href="components/database/area/viewArea.html" data-icon="organize">Area Map</a>
+            </li>
+        </ul>
     </div>
 </body>
 
