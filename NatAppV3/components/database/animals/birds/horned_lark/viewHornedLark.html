@@ -1,72 +1,79 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8">
-    <title>Horned lark</title>
+<meta charset="utf-8" content="width=device-width, initial-scale=1">
+<title>Horned lark</title>
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
-
 <body>
-    <div data-role="view" data-title="Birds" data-layout="main" data-model="app.aboutView" data-show="app.aboutView.onShow" data-after-show="app.aboutView.afterShow">
-        <article>
-            <h1>Horned lark</h1>
-            <section id="Name">
-                <p style="font-style: italic">
-                </p>
-            </section>
-            <!--
-                <section id="Image">
-					<p> <img src="components/database/animals/birds/horned_lark" width="100%"> </p>	
-                </section>
-				-->
-            <section id="Overview">
-                <h1> Overview </h1>
-                <p>
-                    Horned larks are social birds that are usually found on the reserve outside of their breeding season. They prey on small insects and search for small seeds. The Horned Lark mixes with other open country species.
-                </p>
-            </section>
-            <div class="line-separator"></div>
-            <section id="Identification">
-                <h1> Identification </h1>
-                <p>
-                    Horned larks are brown with yellow faces that have the outline of a black mask. They also has tiny black horns that are on the side of their heads. They are relatively small in size.
-                </p>
-            </section>
-            <div class="line-separator"></div>
-            <section id="Habitat">
-                <h1> Habitat </h1>
-                <p>
-                    The Horned lark is found in the open country. They remain in North America year-round. During their breeding season (the summer), they can be found in the northern United States.
-                </p>
-            </section>
-            <div class="line-separator"></div>
-            <section id="Behavior">
-                <h1> Behavior </h1>
-                <p>
-                    Horned larks are common birds to see during daylight. They are very active birds that stay in large flocks outside of their breeding season.
-                </p>
-            </section>
-            <div class="line-separator"></div>
-            <section id="Diet">
-                <h1> Diet and Predators </h1>
-                <p>
-                    Horned larks eat seeds and insects. They feed their offspring mainly insects, such as grasshoppers, beetles, and caterpillars.
-                </p>
-            </section>
-            <div class="line-separator"></div>
-            <section id="References">
-                <h1> References </h1>
-                <ol>
-                    <li>
-                        <a data-role="button" data-rel="external" href="https://www.allaboutbirds.org/guide/Horned_Lark/id">https://www.allaboutbirds.org</a>
-                    </li>
-                    <li>
-                        <a data-role="button" data-rel="external" href="https://www.audubon.org/field-guide/bird/horned-lark">https://www.audubon.org</a>
-                    </li>
-                </ol>
-            </section>
-        </article>
-    </div>
-</body>
 
+
+
+    <div data-role="view" data-title="Birds" data-layout="main" data-model="app.aboutView" data-show="app.aboutView.onShow" data-after-show="app.aboutView.afterShow">
+        <div class="about-view" data-bind="invisible:error">
+            <article>
+                <h1>Horned lark</h1>
+                <div id="Name">
+                </div>
+                <div id="Image">
+                    <p> <img src="components/database/animals/birds/horned_lark" width="100%"></p>
+                </div>
+
+
+
+  <div data-role="main" class="ui-content">
+    <div data-role="collapsible">
+      <h1>Overview</h1>
+      <p>Horned larks are social birds that are usually found on the reserve outside of their breeding season. They prey on small insects and search for small seeds. The Horned Lark mixes with other open country species.</p>
+    </div>
+  </div>
+
+<div data-role="main" class="ui-content">
+    <div data-role="collapsible">
+      <h1>Identification</h1>
+      <p>Horned larks are brown with yellow faces that have the outline of a black mask. They also has tiny black horns that are on the side of their heads. They are relatively small in size.</p>
+    </div>
+  </div>
+
+ <div data-role=main" class="ui-content">
+        <div data-role="collapsible">
+        <h1> Habitat </h1>
+        <p>The Horned lark is found in the open country. They remain in North America year-round. During their breeding season (the summer), they can be found in the northern United States.</p>
+         </div>
+         </div>
+
+<div data-role=main" class="ui-content">
+        <div data-role="collapsible">
+        <h1> Behavior </h1>
+        <p>Horned larks are common birds to see during daylight. They are very active birds that stay in large flocks outside of their breeding season.</p>
+         </div>
+         </div>
+
+<div data-role=main" class="ui-content">
+        <div data-role="collapsible">
+        <h1> Diet and Predators </h1>
+        <p>Horned larks eat seeds and insects. They feed their offspring mainly insects, such as grasshoppers, beetles, and caterpillars.</p>
+         </div>
+         </div>
+
+<div data-role=main" class="ui-content">
+        <div data-role="collapsible">
+        <h1> Refrences </h1>
+        <ol>
+        <li>
+           <a data-role="button" data-rel="external" href="https://www.allaboutbirds.org/guide/Horned_Lark/id">https://www.allaboutbirds.org</a>
+        </li>
+        <li>
+            <a data-role="button" data-rel="external" href="https://www.audubon.org/field-guide/bird/horned-lark">https://www.audubon.org</a>
+         </li>
+         </ol>
+         </div>
+         </div>
+
+
+</div>
+
+</body>
 </html>

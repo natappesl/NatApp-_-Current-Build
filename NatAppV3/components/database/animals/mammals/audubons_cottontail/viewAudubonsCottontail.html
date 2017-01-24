@@ -1,84 +1,87 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8">
-    <title>Audubon's cottontail</title>
+<meta charset="utf-8" content="width=device-width, initial-scale=1">
+<title>Audubon's cottontail</title>
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
-
 <body>
-    <div data-role="view" data-title="Mammals" data-layout="main" data-model="app.aboutView" data-show="app.aboutView.onShow" data-after-show="app.aboutView.afterShow">
-        <article>
-            <h1>Audubon's cottontail</h1>
-            <section id="Name">
-                <p style="font-style: italic">
-                    Sylvilagus audubonii
-                </p>
-            </section>
-            <section id="Image">
-                <p> <img src="components/database/animals/mammals/audubons_cottontail/cottontail.jpg" width="100%"> </p>
-            </section>
-            <section id="Overview">
-                <h1> Overview </h1>
-                <p>
-                    Audubon’s cottontail are a widespread western North American species that can survive well in arid landscapes. Their common name is derived from their bushy white tails, which resemble cotton balls. They can run as fast as 15 mph and can also swim and climb.
-                </p>
-            </section>
-            <div class="line-separator"></div>
-            <section id="Identification">
-                <h1> Identification </h1>
-                <p>
-                    Audubon’s cottontails are small (1.5 kg in weight and 33-43 cm in length). Females tend to be slightly larger than males. They are identified by their fluffy, white tails and mixed grey-brown bodies.
-                </p>
-            </section>
-            <div class="line-separator"></div>
-            <section id="Habitat">
-                <h1> Habitat </h1>
-                <p>
-                    This species can be found throughout the reserve and can even be seen grazing on the lawns at UC Merced. They live and nest in underground holes lined with grass and fur.
-                </p>
-            </section>
-            <div class="line-separator"></div>
-            <section id="Behavior">
-                <h1> Behavior </h1>
-                <p>
-                    Audubon’s cottontails forage during early morning and evening and spend the rest of their day hiding. They breeds between December and late summer.
-                </p>
-            </section>
-            <div class="line-separator"></div>
-            <section id="Diet">
-                <h1> Diet and Predators </h1>
-                <p>
-                    Audubon’s cottontails primarily eats grasses. Their predators include:
-                    <ul>
-                        <li>Foxes</li>
-                        <li>Coyotes</li>
-                        <li>Badgers</li>
-                        <li>Bobcats</li>
-                        <li>Hawks</li>
-                    </ul>
-                </p>
-            </section>
-            <div class="line-separator"></div>
-            <section id="References">
-                <h1> References </h1>
-                <ol>
-                    <li>
-                        <p>Image Credit: Free Use</p>
-                    </li>
-                    <li>
-                        <a data-role="button" data-rel="external" href="http://animaldiversity.org/accounts/Sylvilagus_audubonii/">http://animaldiversity.org</a>
-                    </li>
-                    <li>
-                        <a data-role="button" data-rel="external" href="http://www.iucnredlist.org/details/41297/0">http://www.iucnredlist.org</a>
-                    </li>
-                    <li>
-                        <a data-role="button" data-rel="external" href="http://www.theanimalfiles.com/mammals/rabbits_hares_pikas/desert_cottontail.html">http://www.theanimalfiles.com</a>
-                    </li>
-                </ol>
-            </section>
-        </article>
-    </div>
-</body>
 
+
+
+    <div data-role="view" data-title="Birds" data-layout="main" data-model="app.aboutView" data-show="app.aboutView.onShow" data-after-show="app.aboutView.afterShow">
+        <div class="about-view" data-bind="invisible:error">
+            <article>
+                <h1>Hartweg's golden sunburst</h1>
+                <div id="Name">
+                </div>
+                <div id="Image">
+                    <p> <img src="components/database/animals/mammals/audubons_cottontail/cottontail.jpg" width="100%"></p>
+                </div>
+
+
+
+  <div data-role="main" class="ui-content">
+    <div data-role="collapsible">
+      <h1>Overview</h1>
+      <p>Audubon’s cottontail are a widespread western North American species that can survive well in arid
+                            landscapes. Their common name is derived from their bushy white tails, which resemble cotton
+                            balls. They can run as fast as 15 mph and can also swim and climb.</p>
+    </div>
+  </div>
+
+<div data-role="main" class="ui-content">
+    <div data-role="collapsible">
+      <h1>Identification</h1>
+      <p>Audubon’s cottontails are small (1.5 kg in weight and 33-43 cm in length). Females tend to be slightly
+                            larger than males. They are identified by their fluffy, white tails and mixed grey-brown bodies.</p>
+    </div>
+  </div>
+
+ <div data-role=main" class="ui-content">
+        <div data-role="collapsible">
+        <h1> Habitat </h1>
+        <p></p>
+         </div>
+         </div>
+
+<div data-role="main" class="ui-content">
+    <div data-role="collapsible">
+      <h1>Behavior</h1>
+      <p>Audubon’s cottontails forage during early morning and evening and spend the rest of their day hiding.
+                            They breeds between December and late summer.</p>
+        </div>
+        </div>
+
+<div data-role="main" class="ui-content">
+    <div data-role="collapsible">
+      <h1> Diet and Predators </h1>
+      <p>Audubon’s cottontails primarily eats grasses. Their predators include:</p>
+                        <ul>
+                            <li>Foxes</li>
+                            <li>Coyotes</li>
+                            <li>Badgers</li>
+                            <li>Bobcats</li>
+                            <li>Hawks</li>
+                        </ul>
+                    </div>
+                </div>
+
+<div data-role=main" class="ui-content">
+        <div data-role="collapsible">
+        <h1> Refrences </h1>
+        <ol>
+        <li> <a data-role="button" data-rel="external" href="http://animaldiversity.org/accounts/Sylvilagus_audubonii/">http://animaldiversity.org</a>                                </li>
+                            <li> <a data-role="button" data-rel="external" href="http://www.iucnredlist.org/details/41297/0">http://www.iucnredlist.org</a>                                </li>
+                            <li> <a data-role="button" data-rel="external" href="http://www.theanimalfiles.com/mammals/rabbits_hares_pikas/desert_cottontail.html">http://www.theanimalfiles.com</a>                                </li>
+         </ol>
+         </div>
+         </div>
+
+
+</div>
+
+</body>
 </html>

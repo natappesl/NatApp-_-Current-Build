@@ -1,42 +1,46 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8">
-    <title>Prairie falcon</title>
+<meta charset="utf-8" content="width=device-width, initial-scale=1">
+<title>Prairie falcon</title>
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
-
 <body>
+
+
+
     <div data-role="view" data-title="Birds" data-layout="main" data-model="app.aboutView" data-show="app.aboutView.onShow" data-after-show="app.aboutView.afterShow">
-        <article>
-            <h1>Prairie falcon</h1>
-            <section id="Name">
-                <p style="font-style: italic">
-                </p>
-            </section>
-            <!--
-                <section id="Image">
-                    <p> <img src="components/database/animals/birds/prairie_falcon" width="100%"> </p>
-                </section>
-				-->
-            <section id="Overview">
-                <h1> Overview </h1>
-                <p>
-                    The prairie falcon is frequently used in the sport of falconry. They are large in size for a falcon.
-                </p>
-            </section>
-            <div class="line-separator"></div>
-            <section id="Identification">
-                <h1> Identification </h1>
-                <p>
-                    The feathers on their chests are white with brown spot/bars. Their faces are marked by what looks like a dark mustache that moves along the side of their beaks.
-                </p>
-            </section>
-            <div class="line-separator"></div>
-            <section id="Habitat">
-                <h1> Habitat </h1>
-                <p>
-                    In the summer, prairie falcons are typically found in:
+        <div class="about-view" data-bind="invisible:error">
+            <article>
+                <h1>Prairie falcon</h1>
+                <div id="Name">
+                </div>
+                <div id="Image">
+                    <p> <img src="components/database/animals/birds/prairie_falcon" width="100%"></p>
+                </div>
+
+
+
+  <div data-role="main" class="ui-content">
+    <div data-role="collapsible">
+      <h1>Overview</h1>
+      <p>The prairie falcon is frequently used in the sport of falconry. They are large in size for a falcon.</p>
+    </div>
+  </div>
+
+<div data-role="main" class="ui-content">
+    <div data-role="collapsible">
+      <h1>Identification</h1>
+      <p>The feathers on their chests are white with brown spot/bars. Their faces are marked by what looks like a dark mustache that moves along the side of their beaks.</p>
+    </div>
+  </div>
+
+ <div data-role=main" class="ui-content">
+        <div data-role="collapsible">
+        <h1> Habitat </h1>
+        <p>In the summer, prairie falcons are typically found in:
                     <ul>
                         <li>Hilly Areas</li>
                         <li>Plains</li>
@@ -44,34 +48,37 @@
                         <li>Grasslands</li>
                         <li>Deserts</li>
                     </ul>
-                    In the winter, they can be found living in:
+                    </p>
+                    <p>In the winter, they can be found living in:
                     <ul>
                         <li>cultivated fields</li>
                         <li>lakeshores</li>
                         <li>desert and xeric scrublands</li>
                     </ul>
-                    They avoid forested country and are rarly seen along the coast.
-                </p>
-            </section>
-            <div class="line-separator"></div>
-            <section id="Behavior">
-                <h1> Behavior </h1>
-                <p>
-                    Adult prairie falcons are extremely territorial during their mating season and will fight off intruding birds with loud sounds and attacks. The call of a prairie falcon is a loud "kree-kree-kree", which is usually heard when they are near their nests.
-                </p>
-            </section>
-            <div class="line-separator"></div>
-            <section id="Diet">
-                <h1> Diet and Predators </h1>
-                <p>
-                    Prairie falcons mostly eat small birds and mammals. During their breeding season, their diet consists mostly of ground squirrels; during the winter when the ground squirrels become dormant, their diets shift to young songbirds.
-                </p>
-            </section>
-            <div class="line-separator"></div>
-            <section id="References">
-                <h1> References </h1>
-                <ol>
-                    <li>
+                    </p>
+                    <p>They avoid forested country and are rarly seen along the coast.</p>
+         </div>
+         </div>
+
+<div data-role=main" class="ui-content">
+        <div data-role="collapsible">
+        <h1> Behavior </h1>
+        <p>Adult prairie falcons are extremely territorial during their mating season and will fight off intruding birds with loud sounds and attacks. The call of a prairie falcon is a loud "kree-kree-kree", which is usually heard when they are near their nests.</p>
+         </div>
+         </div>
+
+<div data-role=main" class="ui-content">
+        <div data-role="collapsible">
+        <h1> Diet and Predators </h1>
+        <p>Prairie falcons mostly eat small birds and mammals. During their breeding season, their diet consists mostly of ground squirrels; during the winter when the ground squirrels become dormant, their diets shift to young songbirds.</p>
+         </div>
+         </div>
+
+<div data-role=main" class="ui-content">
+        <div data-role="collapsible">
+        <h1> Refrences </h1>
+        <ol>
+        <li>
                         <a data-role="button" data-rel="external" href="https://www.allaboutbirds.org/guide/Prairie_Falcon/id">https://www.allaboutbirds.org</a>
                     </li>
                     <li>
@@ -83,10 +90,12 @@
                     <li>
                         <a data-role="button" data-rel="external" href="http://www.peregrinefund.org/explore-raptors-species/Prairie_Falcon">http://www.peregrinefund.org</a>
                     </li>
-                </ol>
-            </section>
-        </article>
-    </div>
-</body>
+         </ol>
+         </div>
+         </div>
 
+
+</div>
+
+</body>
 </html>

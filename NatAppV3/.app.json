@@ -6,28 +6,15 @@
       "name": "homeView",
       "components": [
         {
-          "type": "kendo-ui-mobile:editableList",
-          "listExtraFields": [],
-          "detailExtraFields": [],
-          "addScreenExtraFields": [],
-          "editScreenExtraFields": [],
-          "components": [],
+          "type": "kendo-ui-mobile:list",
           "name": "homeViewModel",
           "dataProvider": "defaultProvider",
-          "collection": "Animal",
-          "headerField": "Ave_Height",
+          "collection": "Activities",
           "iconField": false,
-          "addItemForm": false,
-          "editItemForm": false,
-          "deleteItemButton": false,
+          "headerField": "Text",
+          "masterDetails": false,
           "pullToRefresh": false,
-          "endlessScroll": false,
-          "isMapView": false,
-          "serverSideSortingField": "CreatedAt",
-          "serverSideSortingDirection": "asc",
-          "serverSidePaging": false,
-          "detailHeaderFieldSource": "static",
-          "detailHeaderFieldValue": "Detail"
+          "endlessScroll": false
         }
       ],
       "title": "Home View",
@@ -39,28 +26,14 @@
       "name": "plants",
       "components": [
         {
-          "type": "kendo-ui-mobile:editableList",
-          "listExtraFields": [],
-          "detailExtraFields": [],
-          "addScreenExtraFields": [],
-          "editScreenExtraFields": [],
-          "components": [],
+          "type": "kendo-ui-mobile:list",
           "name": "plantsModel",
           "dataProvider": "defaultProvider",
           "collection": "Activities",
           "headerField": "Text",
-          "addItemForm": false,
-          "editItemForm": false,
-          "deleteItemButton": false,
-          "deleteItemConfirmation": true,
+          "masterDetails": false,
           "pullToRefresh": false,
-          "endlessScroll": false,
-          "isMapView": false,
-          "serverSideSortingField": "CreatedAt",
-          "serverSideSortingDirection": "asc",
-          "serverSidePaging": false,
-          "detailHeaderFieldSource": "static",
-          "detailHeaderFieldValue": "Detail"
+          "endlessScroll": false
         }
       ],
       "title": "Plants",
@@ -72,28 +45,14 @@
       "name": "animals",
       "components": [
         {
-          "type": "kendo-ui-mobile:editableList",
-          "listExtraFields": [],
-          "detailExtraFields": [],
-          "addScreenExtraFields": [],
-          "editScreenExtraFields": [],
-          "components": [],
+          "type": "kendo-ui-mobile:list",
           "name": "animalsModel",
           "dataProvider": "defaultProvider",
           "collection": "Activities",
           "headerField": "Text",
-          "addItemForm": false,
-          "editItemForm": false,
-          "deleteItemButton": false,
-          "deleteItemConfirmation": true,
+          "masterDetails": false,
           "pullToRefresh": false,
-          "endlessScroll": false,
-          "isMapView": false,
-          "serverSideSortingField": "CreatedAt",
-          "serverSideSortingDirection": "asc",
-          "serverSidePaging": false,
-          "detailHeaderFieldSource": "static",
-          "detailHeaderFieldValue": "Detail"
+          "endlessScroll": false
         }
       ],
       "title": "Animals",
@@ -148,8 +107,5 @@
   "name": "kendoUiMobileApp",
   "navigation": "listmenu",
   "transition": "none",
-  "skin": "flat",
-  "skinMainColor": "#1a1a1a",
-  "skinTextColor": "#ffffff",
-  "skinAccentColor": "#10c4b2"
+  "skin": "flat"
 }
