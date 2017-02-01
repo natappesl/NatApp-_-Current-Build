@@ -1,46 +1,41 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
-<meta charset="utf-8" content="width=device-width, initial-scale=1">
-<title>Blue dicks</title>
-<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <meta charset="utf-8">
+    <title>Blue dicks</title>
 </head>
+
 <body>
-
-
-
-    <div data-role="view" data-title="flowers" data-layout="main" data-model="app.aboutView" data-show="app.aboutView.onShow" data-after-show="app.aboutView.afterShow">
-        <div class="about-view" data-bind="invisible:error">
-            <article>
-                <h1>Blue dicks</h1>
-                <div id="Name">
-                </div>
-                <div id="Image">
-                    <p> <img src="components/database/plants/flowers/bluedicks/Blue dicks_JHeckel_2015.jpg" width="100%"></p>
-                </div>
-
-
-
-  <div data-role="main" class="ui-content">
-    <div data-role="collapsible">
-      <h1>Overview</h1>
-      <p>The bloom period for blue dicks is between March and May. They are a very drought-tolerant plant.</p>
-    </div>
-  </div>
-
-<div data-role="main" class="ui-content">
-    <div data-role="collapsible">
-      <h1>Identification</h1>
-      <p>Blue dicks are light-blue in color, which makes them easy to spot. They grows between 6-12 in. tall, with 2-3 leaves that are 4-15 in. long.</p>
-    </div>
-  </div>
-
- <div data-role=main" class="ui-content">
-        <div data-role="collapsible">
-        <h1> Habitat </h1>
-        <p>Blue dicks can be found in hillsides, open woodlands, and grasslands. Some of the locations that the Bluedicks have be spotted include:
+    <div data-role="view" data-title="Flowers" data-layout="main" data-model="app.aboutView" data-show="app.aboutView.onShow" data-after-show="app.aboutView.afterShow">
+        <article>
+            <h1>Blue dicks</h1>
+            <section id="Name">
+                <p style="font-style: italic">
+                    Dichelostemma capitatum
+                </p>
+            </section>
+            <section id="Image">
+                <p> <img src="components/database/plants/flowers/bluedicks/Blue dicks_JHeckel_2015.jpg" width="100%"> </p>
+            </section>
+            <section id="Overview">
+                <h1> Overview </h1>
+                <p>
+                    The bloom period for blue dicks is between March and May. They are a very drought-tolerant plant.
+                </p>
+            </section>
+            <div class="line-separator"></div>
+            <section id="Identification">
+                <h1> Identification </h1>
+                <p>
+                    Blue dicks are light-blue in color, which makes them easy to spot. They grows between 6-12 in. tall, with 2-3 leaves that are 4-15 in. long.
+                </p>
+            </section>
+            <div class="line-separator"></div>
+            <section id="Habitat">
+                <h1> Habitat </h1>
+                <p>
+                    Blue dicks can be found in hillsides, open woodlands, and grasslands. Some of the locations that the Bluedicks have be spotted include:
                     <ul>
                         <li>Tucson, Arizona</li>
                         <li>Malibu, California</li>
@@ -51,15 +46,19 @@
                         <li>San Jose, California</li>
                         <li>Gold Hill, Oregon</li>
                     </ul>
-                    </p>
-         </div>
-         </div>
-
-<div data-role=main" class="ui-content">
-        <div data-role="collapsible">
-        <h1> Refrences </h1>
-        <ol>
-        <li>
+                </p>
+            </section>
+        <!--<div class="line-separator"></div>
+            <section id="Diet">
+                <h1> Predators and Beneficial Organisms </h1>
+                <p>
+                </p>
+            </section>-->
+            <div class="line-separator"></div>
+            <section id="References">
+                <h1> References </h1>
+                <ol>
+                    <li>
                         <p>Image Credit: Jenna Heckel</p>
                     </li>
                     <li>
@@ -71,12 +70,10 @@
                     <li>
                         <a data-role="button" data-rel="external" href="http://davesgarden.com/guides/pf/go/64588/#b">http://davesgarden.com</a>
                     </li>
-         </ol>
-         </div>
-         </div>
-
-
-</div>
-
+                </ol>
+            </section>
+        </article>
+    </div>
 </body>
+
 </html>

@@ -1,1 +1,6 @@
-{}
+{
+  "CorePlugins": [
+    "cordova-plugin-network-information",
+    "cordova-plugin-whitelist"
+  ]
+}

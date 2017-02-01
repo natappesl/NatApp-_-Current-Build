@@ -1,16 +1,18 @@
 'use strict';
 
-app.homeView = kendo.observable({
+app.animals = kendo.observable({
     onShow: function() {},
     afterShow: function() {}
 });
 
-// START_CUSTOM_CODE_homeView
-// END_CUSTOM_CODE_homeView
+// START_CUSTOM_CODE_animals
+// Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
+
+// END_CUSTOM_CODE_animals
 (function(parent) {
     var dataProvider = app.data.defaultProvider,
         fetchFilteredData = function(paramFilter, searchFilter) {
-            var model = parent.get('homeViewModel'),
+            var model = parent.get('animalsModel'),
                 dataSource = model.get('dataSource');
 
             if (paramFilter) {
@@ -70,7 +72,7 @@ app.homeView = kendo.observable({
         dataSourceOptions = {
             type: 'everlive',
             transport: {
-                typeName: 'Animal',
+                typeName: 'Activities',
                 dataProvider: dataProvider
             },
             change: function(e) {
@@ -90,8 +92,8 @@ app.homeView = kendo.observable({
             schema: {
                 model: {
                     fields: {
-                        'Ave_Height': {
-                            field: 'Ave_Height',
+                        'Text': {
+                            field: 'Text',
                             defaultValue: ''
                         },
                     }
@@ -107,7 +109,7 @@ app.homeView = kendo.observable({
         dataSource = new kendo.data.DataSource(dataSourceOptions),
         // start data sources
         // end data sources
-        homeViewModel = kendo.observable({
+        animalsModel = kendo.observable({
             dataSource: dataSource,
             fixHierarchicalData: function(data) {
                 var result = {},
@@ -157,26 +159,26 @@ app.homeView = kendo.observable({
                 return result;
             },
             itemClick: function(e) {
-                var dataItem = e.dataItem || homeViewModel.originalItem;
+                var dataItem = e.dataItem || animalsModel.originalItem;
 
-                app.mobileApp.navigate('#components/homeView/details.html?uid=' + dataItem.uid);
+                app.mobileApp.navigate('#components/animals/details.html?uid=' + dataItem.uid);
 
             },
             detailsShow: function(e) {
-                homeViewModel.setCurrentItemByUid(e.view.params.uid);
+                animalsModel.setCurrentItemByUid(e.view.params.uid);
             },
             setCurrentItemByUid: function(uid) {
                 var item = uid,
-                    dataSource = homeViewModel.get('dataSource'),
+                    dataSource = animalsModel.get('dataSource'),
                     itemModel = dataSource.getByUid(item);
 
-                if (!itemModel.Ave_Height) {
-                    itemModel.Ave_Height = String.fromCharCode(160);
+                if (!itemModel.Text) {
+                    itemModel.Text = String.fromCharCode(160);
                 }
 
-                homeViewModel.set('originalItem', itemModel);
-                homeViewModel.set('currentItem',
-                    homeViewModel.fixHierarchicalData(itemModel));
+                animalsModel.set('originalItem', itemModel);
+                animalsModel.set('currentItem',
+                    animalsModel.fixHierarchicalData(itemModel));
 
                 return itemModel;
             },
@@ -198,10 +200,10 @@ app.homeView = kendo.observable({
 
     if (typeof dataProvider.sbProviderReady === 'function') {
         dataProvider.sbProviderReady(function dl_sbProviderReady() {
-            parent.set('homeViewModel', homeViewModel);
+            parent.set('animalsModel', animalsModel);
         });
     } else {
-        parent.set('homeViewModel', homeViewModel);
+        parent.set('animalsModel', animalsModel);
     }
 
     parent.set('onShow', function(e) {
@@ -223,7 +225,9 @@ app.homeView = kendo.observable({
         fetchFilteredData(param);
     });
 
-})(app.homeView);
+})(app.animals);
 
-// START_CUSTOM_CODE_homeViewModel
-// END_CUSTOM_CODE_homeViewModel
+// START_CUSTOM_CODE_animalsModel
+// Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
+
+// END_CUSTOM_CODE_animalsModel
