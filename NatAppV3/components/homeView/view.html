@@ -1,35 +1,22 @@
-<div data-role="view" data-title="Home View" data-layout="main" data-model="app.homeView" data-show="app.homeView.onShow" data-after-show="app.homeView.afterShow">
+<!DOCTYPE html>
+<html>
 
-    <!-- START_CUSTOM_CODE_homeView -->
-    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+<head>
+    <title>Home View</title>
+</head>
 
-    <!-- END_CUSTOM_CODE_homeView -->
-    <header data-role="header">
-        <div data-role="navbar" class="header-text">
-            <a data-role="backbutton" data-align="left" class="backButtonWrapper" style="display: none;">Back</a>
-            <span data-role="view-title"></span>
+<body>
+    <!--Not going to lie: I have NO idea what this is doing, so I'm just going to leave it and hope
+		that everything works out. ~ Landon-->
+    <div data-role="view" data-title="Home View" data-layout="main" data-model="app.homeView" data-show="app.homeView.onShow" data-after-show="app.homeView.afterShow">
+        <ul data-role="listview" data-style="inset" data-template="homeViewModelTemplate" data-bind="{ source: homeViewModel.dataSource}" data-pull-to-refresh="false" data-endless-scroll="false">
+        </ul>
+        <script type="text/x-kendo-template" id="homeViewModelTemplate">
+            <div class="image-with-text">
+                <h3>#: data['Text'] #</h3>
+            </div>
+        </script>
+    </div>
+</body>
 
-            <a data-align="right" data-role="button" class="nav-button" href="#/">Index</a>
-
-
-        </div>
-    </header>
-
-
-    <ul class="masterDetailView" data-role="listview" data-auto-bind="false" data-style="inset" data-template="homeViewModelTemplate" data-bind="source: homeViewModel.dataSource, events: {click: homeViewModel.itemClick}" data-pull-to-refresh="false" data-endless-scroll="false">
-    </ul>
-
-
-    <!-- START_CUSTOM_CODE_homeViewModel -->
-    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
-
-    <!-- END_CUSTOM_CODE_homeViewModel -->
-    <script type="text/x-kendo-template" id="homeViewModelTemplate">
-        <div class="image-with-text">
-            # data = app.homeView.homeViewModel.fixHierarchicalData(data); #
-
-            <h3>#: data['Ave_Height'] #</h3>
-
-        </div>
-    </script>
-</div>
+</html>
